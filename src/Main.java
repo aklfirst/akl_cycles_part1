@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.time.Year;
 
 public class Main {
@@ -98,6 +99,14 @@ public class Main {
             System.out.println(a10 + " " + a9 + " " + a8 + " " + a7 + " " + a6 + " " + a5 + " " + a4 + " " + a3 + " " + a2 + " " +a1);
         break;
         }
+// Задание 1 после просмотра домашки - с корректировкой
+        int currentNum = 0;
+        while (currentNum<10) {
+            System.out.print(++currentNum+" ");}
+        System.out.println();
+        for(;currentNum>0;currentNum--){
+            System.out.print(currentNum+" ");}
+        System.out.println();
 
 // Задание 2
 
@@ -109,6 +118,13 @@ public class Main {
                 firstFriday = firstFriday + 7;
             }
             }
+
+// Задание 2 с доработкой после просмотра ДЗ
+        int beginFriday = 5;
+        for(; beginFriday <=31; beginFriday = beginFriday +7) {
+            System.out.println("This is Friday, date is " + beginFriday +" - time to prepare the report");}
+
+
 
 // Задание 3
 
@@ -122,8 +138,19 @@ public class Main {
             if (year >= checkYearPast && year <= checkYearFuture) {
                 System.out.println(year);}
             }
+
+// Задание 3 с учетом доработки после просмотра ДЗ
+        int thisYear = LocalDate.now().getYear();
+        int yearFuture = thisYear + 100;
+        int yearPast = thisYear -200;
+        for (int runYear = yearPast; runYear<= yearFuture; runYear++) {
+            if (runYear % 79 == 0) {
+                System.out.println(runYear);}
+            }
         }
-}
+
+        }
+
 
 
 
